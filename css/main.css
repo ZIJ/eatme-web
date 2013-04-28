@@ -1,0 +1,682 @@
+@import url(960_12_col.css);
+@font-face {
+    font-family: 'droid_sans';
+    src: url('../fonts/droidsans-webfont.eot');
+    src: url('../fonts/droidsans-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/droidsans-webfont.woff') format('woff'),
+         url('../fonts/droidsans-webfont.ttf') format('truetype'),
+         url('../fonts/droidsans-webfont.svg#droid_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'droid_sans';
+    src: url('../fonts/droidsans-bold-webfont.eot');
+    src: url('../fonts/droidsans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/droidsans-bold-webfont.woff') format('woff'),
+         url('../fonts/droidsans-bold-webfont.ttf') format('truetype'),
+         url('../fonts/droidsans-bold-webfont.svg#droid_sansbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Reset styles
+------------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+a:focus{
+	outline: none;
+}
+img {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+ul li{
+	list-style-type: none;
+}
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+html {height: 100%;}
+* html body {height: 100%;}
+
+body{
+	font-family: 'droid_sans', Arial, sans-serif;
+	font-size: 0.875em;
+	color: #403f3f;
+	min-height: 100%;
+  position: relative;
+}
+a{
+	text-decoration: none;
+	color: #0e0e0e;
+}
+a:hover{
+	color: #bb2f0a;
+}
+h1{
+	font-weight: bold;
+	font-size: 1.6em;
+	margin-bottom: 20px;
+	display: inline-block;
+}
+h2{
+	font-weight: bold;
+	font-size: 1.3em;
+	line-height: 35px;
+	color: #ffffff;
+	text-shadow: 0 1px 1px #000000;
+}
+/*help classes*/
+.center{
+	text-align: center;
+}
+.right{
+	float: right;
+}
+.left{
+	float: left;
+}
+/*main styles*/
+header.header{
+	height: 66px;
+	background: url(../img/header-bg.png) 0 0 transparent repeat-x;
+	color: #ffffff;
+	font-size: 0.857em;
+	line-height: 61px;
+	text-transform: uppercase;
+	overflow: hidden;
+	margin-bottom: -5px;
+	position: relative;
+	z-index: 5;
+}
+.page{
+  padding-bottom: 125px;
+}
+.enter-list li{
+	display: inline-block;
+	margin-top: 13px;
+}
+
+.enter-list li a{
+	display: block;
+	width: 32px;
+	height: 32px;
+	font-size:0;
+	background: url(../img/social-button.png) 0 0 transparent no-repeat;
+	margin: 0px 3px;
+}
+.enter-list li a.twitter{
+	background-position: 0 0;
+}
+.enter-list li a.twitter:hover{
+	background-position: 0 -33px;
+}
+  
+.enter-list li a.facebook{
+	background-position: -35px 0;
+}
+.enter-list li a.facebook:hover{
+	background-position: -35px -33px;
+}
+ .enter-list li a.google{
+	background-position: -69px 0;
+}
+.enter-list li a.google:hover{
+	background-position: -69px -33px;
+}
+section.bunner{
+	background: url(../img/background.jpg) 50% -61px transparent no-repeat;
+	padding: 30px 0 40px;
+	font-size: 1.143em;
+	color: #ffffff;
+	line-height: 1.313em;
+	text-shadow: 2px 2px 2px #000000;
+	height: 305px; 
+	position: relative;
+}
+
+section.bunner:after{
+	display: block;
+	content:"";
+	height: 305px;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 30px;
+	right: 0;
+	/* background: rgba(0,0,0,0.2);  */
+}
+
+section.bunner .container_12{
+	position: relative;
+	z-index: 5;
+	padding-top: 30px;
+}
+section.bunner h1{
+	margin-bottom: 0;
+}
+a.appstore-button{
+    position: relative;
+	display: inline-block;
+	text-decoration: none;
+	font-size: 0px;
+	text-decoration: none;
+	background: url(../img/app-button.png) 0 0 transparent no-repeat;
+	width: 169px;
+	height: 52px;
+    left: 1020px;
+}
+a.appstore-button:hover{
+	background-position: 0 -53px;
+}
+.search-part{
+	position: relative;
+	background: #d87435;
+	border-bottom: 1px solid #e0905d;
+	padding: 17px 0 20px;
+	margin-bottom: 50px;
+}
+.search-part:after{
+	display: block;
+	width: 100%;
+	height: 14px;
+	background: url(../img/orange-triangle.png) 0 0 transparent repeat-x;
+	content:"";
+	position: absolute;
+	top: -14px;
+	left: 0;
+	right: 0;
+}
+input[type="search"]{
+	width: 100%;
+	border: 1px solid #bb2f0a;
+	box-shadow: inset 0 1px 1px #cacaca;
+	border-radius: 6px;
+	background: url(../img/search.png) 15px 15px #ffffff no-repeat;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	height: 52px;
+	position: relative;
+	padding: 0 20px 0 47px;
+	color: #0e0e0e;
+}
+input[type="search"]:focus {
+    outline: none;
+}
+input[type="search"].small-search{
+	height: 35px;
+	line-height: 35px;
+	background-position: 15px 6px;
+}
+input[type="search"]::-webkit-input-placeholder {
+	color: #8c8c8c;
+	font-size: 1em;
+}
+input[type="search"]:-moz-placeholder {
+	color: #8c8c8c;
+	font-size: 1em;
+}
+.restaurant-block{
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	overflow: hidden;
+	border: 1px solid #bdbdbd;
+	border-radius: 5px;
+	margin-bottom: 35px;	
+}
+.restaurant-block img{
+	width: 300px;
+}
+a.image-link{
+	display: block;
+	height: 135px;
+}
+.info-part{
+	position: relative;
+	background: #ffffff;
+	height: 170px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding: 15px 25px 0 25px;
+	box-shadow: inset 0 -1px 0 #e5e5e5;
+}
+.info-part:after{
+	display: block;
+	content: "";
+	height: 12px;
+	background: url(../img/white-triangle.png) 0 0 transparent repeat-x;
+	position: absolute;
+	top: -12px;
+	left: 0;
+	right: 0;
+	width: 100%;
+}
+.info-part a{
+	font-weight: bold;
+	font-size: 1.6em;
+	margin-bottom: 20px;
+	display: inline-block;
+}
+ul.contact-list li{
+	display: block;
+	padding-left: 25px;
+	line-height: 18px;
+	margin-bottom: 10px;
+	background: url(../img/add-icon.png) 0 0 transparent no-repeat;
+}
+ul.contact-list li.phone{
+	background-position: 0 0;
+}
+ul.contact-list li.address{
+	background-position: 0 -18px;
+}
+ul.contact-list li.times{
+	background-position: 0 -35px;
+}
+.orange-section{
+	background: #d87435;
+	padding: 10px 0;
+	border-bottom: 1px solid #e0905d;
+	margin-bottom: 50px;
+}
+
+.orange-section:after{
+    display: block;
+    width: 100%;
+    height: 14px;
+    background: url(../img/orange-triangle.png) 0 0 transparent repeat-x;
+    content:"";
+    position: absolute;
+    top: -14px;
+    left: 0;
+    right: 0;
+}
+
+.breadcrumbs{
+	color: #ffffff;
+	text-shadow: 0 1px 1px #000000;
+	line-height: 35px;
+}
+.breadcrumbs a{
+	color: #ffffff;
+	text-shadow: 0 1px 1px #000000;
+}
+.about-block img, ul.dish-block li img{
+	display: block;
+	border: 1px solid #bdbdbd;
+	border-radius: 5px;
+}
+
+.about-block{
+	margin-bottom: 50px;
+}
+
+.category-item{
+	border: 1px solid #bdbdbd;
+	border-radius: 5px;
+	overflow: hidden;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	margin-bottom: 20px;
+	box-shadow: inset  0 -1px 0 #e5e5e5;
+	box-shadow: inset 0 -1px 0 #e5e5e5;
+}
+.category-item a{
+	display: block;
+	height: 140px;	
+}
+.category-item a span{
+	position: relative;
+	font-weight: bold;
+	font-size: 1.2em;
+	padding-left: 20px;
+	display: block;
+}
+.category-item:hover img{
+	opacity: 0.6;
+}
+.category-item a span:after{
+	display: block;
+	content: "";
+	height: 12px;
+	background: url(../img/white-triangle.png) 0 0 transparent repeat-x;
+	position: absolute;
+	top: -8px;
+	left: 0;
+	right: 0;
+	width: 100%;
+}
+.price{
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #bb2f0a;
+}
+ul.dish-block li{
+	display: block;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #bdbdbd;
+}
+ul.dish-block li:last-child{
+	border-bottom: 0;
+	margin-bottom: 30px;
+}
+ul.dish-block li h2{
+	color: #bb2f0a;
+	text-shadow: 0 1px 1px #444444;
+	margin-bottom: 10px;
+}
+dl dt{
+	font-weight: bold;
+	float:left;
+	margin-right: 10px;
+	color: #0E0E0E;
+}
+dl dd{
+	padding-bottom: 10px;
+}
+#footer {
+  position: absolute;
+  bottom: 0;
+  height: 97px;
+  border-top: 1px solid #454545;
+  border-bottom: 1px solid #7c7c7c;
+  width:  100%;
+  background: url(../img/footer-bg.png) 0 0 transparent repeat-x;
+  color: #ffffff;
+}
+a.follow{
+	width: 90px;
+	height: 27px;
+	line-height: 27px;
+	color: #d87435;
+	font-size: 0.857em;
+	border-radius: 4px;
+	display: inline-block;
+	margin: 0 5px;
+	background:#ffffff;
+	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#ffffff), to(#e3e3e3));
+	background: -webkit-linear-gradient(#ffffff, #e3e3e3);
+	background: -moz-linear-gradient(#ffffff, #e3e3e3);
+	background: -ms-linear-gradient(#ffffff, #e3e3e3);
+	background: -o-linear-gradient(#ffffff, #e3e3e3);
+	background: linear-gradient(#ffffff, #e3e3e3);
+	padding-left: 39px;
+}
+a.follow.f-facebook{
+	padding-left: 27px;
+	width: 102px;
+}
+a.follow:hover{
+	background:#ec8747;
+	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#ec8747), to(#d87435));
+	background: -webkit-linear-gradient(#ec8747, #d87435);
+	background: -moz-linear-gradient(#ec8747, #d87435);
+	background: -ms-linear-gradient(#ec8747, #d87435);
+	background: -o-linear-gradient(#ec8747, #d87435);
+	background: linear-gradient(#ec8747, #d87435);
+	color: #ffffff;
+}
+a.f-twitter:after{
+	display: block;
+	content: "";
+	background: url(../img/follow-button.png) 0 -26px transparent no-repeat;
+	width: 21px;
+	height: 16px;
+	float: left;
+	margin-left: -30px;
+	margin-top: 6px;
+}
+a.f-twitter:hover:after{
+	background: url(../img/follow-button.png) 0 0 transparent no-repeat;
+}
+a.f-facebook:after{
+	display: block;
+	content: "";
+	background: url(../img/follow-button.png) -23px -26px transparent no-repeat;
+	width: 10px;
+	height: 21px;
+	float: left;
+	margin-left: -17px;
+	margin-top: 3px;
+}
+a.f-facebook:hover:after{
+	background: url(../img/follow-button.png) -23px 0 transparent no-repeat;
+}
+
+#footer .follow_button{
+	margin: 19px 0 15px;
+}
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
